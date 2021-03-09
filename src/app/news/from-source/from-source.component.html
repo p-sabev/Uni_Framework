@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+
+    <div *ngFor="let article of articles" class="col-12">
+      <app-article-preview [article]="article"></app-article-preview>
+    </div>
+
+    <div class="col-12" *ngIf="!articles && !loadingNews">
+      <div class="alert alert-secondary text-center" role="alert">
+        There is no news available from this source!
+      </div>
+    </div>
+
+  </div>
+</div>

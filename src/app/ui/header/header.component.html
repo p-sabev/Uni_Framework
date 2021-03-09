@@ -1,0 +1,17 @@
+<header>
+  <nav class="navbar navbar-dark bg-custom">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" (click)="showSidebar = !showSidebar;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <span *ngIf="(appTitle | async) !== 'News Headlines'" 
+            class="go-to-home" [routerLink]="['']">
+        <fa-icon [icon]="faHome"></fa-icon>
+      </span>
+
+      <a class="navbar-brand">{{appTitle | async}}</a>
+    </div>
+  </nav>
+</header>
+<app-sidebar [show]="showSidebar" (sidebarClosed)="showSidebar = false;"></app-sidebar>

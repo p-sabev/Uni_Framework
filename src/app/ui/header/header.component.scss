@@ -1,0 +1,25 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.bg-custom {
+  background: #4154B0;
+}
+
+.navbar-brand {
+  flex: auto;
+  padding-left: 2rem;
+  font-weight: bold;
+}
+
+.go-to-home {
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  padding-left: 20px;
+}

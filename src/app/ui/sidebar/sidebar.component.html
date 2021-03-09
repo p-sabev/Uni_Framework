@@ -1,0 +1,13 @@
+<ng-container *ngIf="show">
+  <div id="sidebar" class="sidebar">
+    <span class="closebtn" (click)="hideSidebar()">&times;</span>
+
+    <a *ngFor="let source of sources" (click)="goToSourceNews(source.id, source.name)" [routerLink]="['/news/' + source.id]"
+      class="source-container">
+      <span class="source-img"></span>
+      <span class="source-name">{{source.name}}</span>
+    </a>
+  </div>
+
+  <div class="overlay" (click)="hideSidebar()"></div>
+</ng-container>

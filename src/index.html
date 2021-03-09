@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>SimpleNewsApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    .loader {
+      border: 10px solid #f3f3f3;
+      border-top: 10px solid #4154B0;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      animation: spin 1.5s linear infinite;
+      position: fixed;
+      top: calc(50% - 60px);
+      right: calc(50% - 60px);
+      z-index: 150;
+    }
+
+    .overlay {
+      z-index: 149;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      width: 100vw;
+      background: #00000073;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <app-root>
+    <nav style="background-color: #4154B0; height: 50px; width: 100%"></nav>
+    <div class="loader"></div>
+    <div class="overlay"></div>
+  </app-root>
+</body>
+
+</html>

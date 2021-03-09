@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="article-container" *ngIf="article">
+
+        <div class="article-main-info">
+          <div class="article-src-img-container">
+            <div class="article-src-img" [routerLink]="['/news/' + article.source.id]"></div>
+          </div>
+          <div class="article-title">
+            <h3>{{article.title}}</h3>
+            <h4 [routerLink]="['/news/' + article.source.id]">{{article.source.name}}</h4>
+          </div>
+        </div>
+
+        <div class="article-image-container">
+          <img [src]="article.urlToImage" [alt]="article.title" appLazyLoadImg>
+        </div>
+
+        <div class="article-content">
+          <p>{{article.description}}</p>
+        </div>
+
+        <div class="article-controls">
+          <div class="row">
+            <div class="control col-sm-12 col-md-4" (click)="userLikedArticle()">
+              <fa-icon [icon]="faThumbsUp" [ngClass]="{'liked': article.userHasLiked}"></fa-icon> {{article.likes}} Likes
+            </div>
+            <div class="control col-sm-12 col-md-4">
+              <fa-icon [icon]="faComments"></fa-icon> Comments
+            </div>
+            <div class="control col-sm-12 col-md-4" shareButton="facebook" [url]="article.url" [title]="article.title"
+              [description]="article.description">
+              <fa-icon [icon]="faShareAlt"></fa-icon> Share
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

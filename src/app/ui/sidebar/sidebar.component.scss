@@ -1,0 +1,73 @@
+.sidebar {
+  height: calc(100vh - 56px);
+  width: 100vw;
+  max-width: 400px;
+  position: fixed;
+  z-index: 99;
+  top: 56px;
+  left: 0;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  padding-top: 10px;
+  transition: 0.5s;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: black;
+  cursor: pointer;
+}
+
+.overlay {
+  height: calc(100vh - 56px);
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  background: #00000073;
+  z-index: 98;
+}
+
+.source-container {
+  margin: 10px 10px 10px 30px;
+  transition: 0.3s;
+  height: 35px;
+  display: block;
+}
+
+.source-img {
+  width: 35px;
+  height: 35px;
+  background: #909092;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.source-name {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 19px;
+  color: #495057;
+  padding-left: 10px;
+  line-height: 35px;
+  position: absolute;
+}
+
+.source-name:hover {
+  color: black;
+  font-weight: 500;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+
+  .sidebar a {
+    font-size: 18px;
+  }
+}
